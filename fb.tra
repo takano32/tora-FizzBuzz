@@ -1,0 +1,20 @@
+#!/usr/bin/env tora
+
+sub fb($n) {
+	if $n == 0 {
+		return true;
+	}
+	fb($n-1);
+	if $n % 15 == 0 {
+		say("FizzBuzz")
+	} elsif $n % 5 == 0 {
+		say("Buzz")
+	} elsif $n % 3 == 0 {
+		say("Fizz")
+	} else {
+		say($n)
+	}
+}
+
+fb(100);
+
